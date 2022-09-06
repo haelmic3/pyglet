@@ -1,9 +1,16 @@
+#!/usr/local/bin/python3
+
 import tkinter as tk
 
-root = tk.Tk()
+def main():
+   root = tk.Tk()
+   root.configure(background="grey")
+   root.title("Hello, World!")
 
-#FIXME uses system background but not system text color so black on black is possible
+   hello = tk.Label(root,text="Hello, World!",bg="black",fg="white")
+   hello.pack(pady=20,padx=20)
 
-hello = tk.Label(root, text="Hello, World!").pack()
+   root.mainloop()
 
-root.mainloop()
+if(__name__=="__main__"):
+   main()
